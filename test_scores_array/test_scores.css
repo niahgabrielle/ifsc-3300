@@ -9,7 +9,3 @@ body {
 h1 {
     color: blue;
 }
-label {
-    display: inline-block;
-    width: 10em;
-}

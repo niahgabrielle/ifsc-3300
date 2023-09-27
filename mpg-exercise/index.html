@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Miles Per Gallon Calculator</title>
-    <link rel="stylesheet" href="../mpg-exercise/mpg.css">
+    <link rel="stylesheet" href="mpg.css">
 </head>
 <body>
     <main>
@@ -13,18 +14,20 @@
             "use strict";
             
             // get miles driven from user
-            const miles = parseInt(prompt("Enter miles driven"));
+            let miles = parseFloat(prompt("Enter miles driven"));
+            miles = miles.toFixed(2)
 
             // get gallons used from user
-            const gallons = parseInt(prompt("Enter gallons of gas used"));
+            let gallons = parseFloat(prompt("Enter gallons of gas used"));
+            gallons = gallons.toFixed(2);
 
             // calculate mpg
-            const mpg = parseFloat(miles/gallons);
+            const mpg = (miles/gallons).toFixed(2);
 
             // display results
-            const html = `<p><label>Miles: </label>${miles}</p>
-                <p><label>Gallons: </label>${gallons}</p>
-                <p><label>MPG: </label>${mpg.toFixed(2)}</p>`;
+            const html = "<p>Miles driven = " + miles + "</p>" +
+				    "<p>Gallons of gas = " + gallons + "</p>" +
+					"<p>Miles per gallon = " + mpg + "<p>";
             document.write(html);
         </script>    
     </main>
